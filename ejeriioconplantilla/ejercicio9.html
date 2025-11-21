@@ -1,116 +1,208 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Cristina</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+/* ==== GLOBAL ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- HEADER HERO -->
-    <header class="hero" id="inicio">
-        <nav class="navbar">
-            <h1 class="logo">Cristina</h1>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#portafolio">Portafolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    color: #333;
+}
 
-        <div class="hero-content">
-            <h2 class="hero-title">Mi página web</h2>
-            <p class="hero-sub">Me gustan los kebabs</p>
-            <a href="#portafolio" class="btn-primary">Ver Portafolio</a>
-        </div>
-    </header>
+/* ==== HERO ==== */
+.hero {
+    background: 
+      linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1604908812732-9c33f0e44ae1?auto=format&fit=crop&w=1200&q=60')
+      center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 20px 40px;
+}
 
-    <!-- SOBRE MI -->
-    <section class="about" id="sobre-mi">
-        <h2 class="section-title">Sobre mí</h2>
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <div class="about-container">
-            <img class="avatar" 
-                src="https://api.dicebear.com/7.x/adventurer/svg?hair=longWavy&hairColor=brown&eyes=variant02&nose=variant02&accessories=none&mouth=variant01" 
-                alt="Avatar Cristina">
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
 
-            <div class="about-text">
-                <p>Soy Cristina: vaga profesional, amante de los libros, los gatos y, por encima de todo, los kebabs.</p>
-                <p>Me encanta crear cosas visualmente bonitas y perder el tiempo comiendo.</p>
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
 
-                <h3>Habilidades</h3>
-                <ul>
-                    <li>Comer</li>
-                </ul>
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-                <p>Mi objetivo: vivir entre gatos y kebabs 🍢🐱.</p>
-            </div>
-        </div>
-    </section>
+.nav-links a:hover {
+    opacity: 0.7;
+}
 
-    <!-- PORTAFOLIO -->
-    <section class="portfolio" id="portafolio">
-        <h2 class="section-title">Portafolio</h2>
+.hero-content {
+    text-align: center;
+    margin-bottom: 100px;
+}
 
-        <div class="projects-grid">
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
 
-            <div class="project-card">
-                <img src="https://picsum.photos/600/400?random=1" alt="Proyecto 1">
-                <h3>Kebab UI</h3>
-                <p>Interfaz minimalista inspirada en los colores cálidos de los kebabs auténticos.</p>
-                <a href="#" class="btn-secondary">Ver más</a>
-            </div>
+.hero-sub {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
 
-            <div class="project-card">
-                <img src="https://picsum.photos/600/400?random=2" alt="Proyecto 2">
-                <h3>Gato App</h3>
-                <p>Aplicación para ver fotos de gatos… porque nunca hay suficientes gatos.</p>
-                <a href="#" class="btn-secondary">Ver más</a>
-            </div>
+/* BUTTONS */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+}
 
-            <div class="project-card">
-                <img src="https://picsum.photos/600/400?random=3" alt="Proyecto 3">
-                <h3>Food Design</h3>
-                <p>Concepto visual para amantes de la comida: bonito, limpio, delicado.</p>
-                <a href="#" class="btn-secondary">Ver más</a>
-            </div>
+.btn-primary {
+    background: #ff7b54;
+    color: white;
+}
 
-            <div class="project-card">
-                <img src="https://picsum.photos/600/400?random=4" alt="Proyecto 4">
-                <h3>Mockup Pro</h3>
-                <p>Tarjetas y gráficos modernos con estilo elegante y profesional.</p>
-                <a href="#" class="btn-secondary">Ver más</a>
-            </div>
+.btn-primary:hover {
+    background: #ff5722;
+    transform: translateY(-3px);
+}
 
-        </div>
-    </section>
+.btn-secondary {
+    background: #fff;
+    color: #ff7b54;
+    border: 2px solid #ff7b54;
+}
 
-    <!-- CONTACTO -->
-    <section class="contact" id="contacto">
-        <h2 class="section-title">Contacto</h2>
+.btn-secondary:hover {
+    background: #ff7b54;
+    color: white;
+}
 
-        <form class="contact-form">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo" required>
-            <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit" class="btn-primary">Enviar</button>
-        </form>
+/* ==== SECTIONS ==== */
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 50px 0 20px;
+    font-weight: 700;
+}
 
-        <div class="social-icons">
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt=""></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt=""></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt=""></a>
-        </div>
-    </section>
+/* ==== ABOUT ==== */
+.about {
+    padding: 60px 20px;
+}
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2024 Cristina - Todos los derechos reservados.</p>
-    </footer>
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
-</body>
-</html>
+.avatar {
+    width: 280px;
+    border-radius: 50%;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.about-text p {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+/* ==== PORTAFOLIO ==== */
+.portfolio {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.projects-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ==== CONTACTO ==== */
+.contact {
+    padding: 60px 20px;
+    background: #f5f5f5;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+
+/* ==== FOOTER ==== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
 
