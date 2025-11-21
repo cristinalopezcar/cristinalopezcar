@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Cristina</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ======= HEADER ======= -->
+    <!-- HEADER HERO -->
     <header class="hero" id="inicio">
         <nav class="navbar">
             <h1 class="logo">Cristina</h1>
@@ -21,92 +22,91 @@
         </nav>
 
         <div class="hero-content">
-            <h2>Mi página web</h2>
-            <p>Me gustan los kebabs</p>
-            <a href="#portafolio" class="btn">Ver Portafolio</a>
+            <h2 class="hero-title">Mi página web</h2>
+            <p class="hero-sub">Me gustan los kebabs</p>
+            <a href="#portafolio" class="btn-primary">Ver Portafolio</a>
         </div>
     </header>
 
-    <!-- ======= SOBRE MI ======= -->
-    <section class="sobre-mi" id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <div class="sobre-container">
-            <img class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?hair=longWavy&hairColor=brown&eyes=variant02&nose=variant03&accessories=eyepatch&accessoriesProbability=0" alt="Avatar Cristina">
+    <!-- SOBRE MI -->
+    <section class="about" id="sobre-mi">
+        <h2 class="section-title">Sobre mí</h2>
 
-            <div class="texto">
-                <p>Soy Cristina, vaga, me gusta leer, los gatos y lo más importante: los kebabs.</p>
+        <div class="about-container">
+            <img class="avatar" 
+                src="https://api.dicebear.com/7.x/adventurer/svg?hair=longWavy&hairColor=brown&eyes=variant02&nose=variant02&accessories=none&mouth=variant01" 
+                alt="Avatar Cristina">
+
+            <div class="about-text">
+                <p>Soy Cristina: vaga profesional, amante de los libros, los gatos y, por encima de todo, los kebabs.</p>
+                <p>Me encanta crear cosas visualmente bonitas y perder el tiempo comiendo.</p>
 
                 <h3>Habilidades</h3>
                 <ul>
                     <li>Comer</li>
                 </ul>
 
-                <p>También disfruto aprender cosas nuevas y crear proyectos visuales bonitos.</p>
-                <p>Mi pasión por los kebabs es superior a todo.</p>
+                <p>Mi objetivo: vivir entre gatos y kebabs 🍢🐱.</p>
             </div>
         </div>
     </section>
 
-    <!-- ======= PORTAFOLIO ======= -->
-    <section class="portafolio" id="portafolio">
-        <h2>Portafolio</h2>
+    <!-- PORTAFOLIO -->
+    <section class="portfolio" id="portafolio">
+        <h2 class="section-title">Portafolio</h2>
 
         <div class="projects-grid">
 
-            <!-- Proyecto 1 -->
             <div class="project-card">
-                <img src="https://picsum.photos/500/300?random=1" alt="Proyecto 1">
-                <h3>Proyecto 1</h3>
-                <p>Diseño visual moderno inspirado en kebabs minimalistas.</p>
-                <a href="#" class="btn small">Ver más</a>
+                <img src="https://picsum.photos/600/400?random=1" alt="Proyecto 1">
+                <h3>Kebab UI</h3>
+                <p>Interfaz minimalista inspirada en los colores cálidos de los kebabs auténticos.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
             </div>
 
-            <!-- Proyecto 2 -->
             <div class="project-card">
-                <img src="https://picsum.photos/500/300?random=2" alt="Proyecto 2">
-                <h3>Proyecto 2</h3>
-                <p>Aplicación web con temática de gatos y comida deliciosa.</p>
-                <a href="#" class="btn small">Ver más</a>
+                <img src="https://picsum.photos/600/400?random=2" alt="Proyecto 2">
+                <h3>Gato App</h3>
+                <p>Aplicación para ver fotos de gatos… porque nunca hay suficientes gatos.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
             </div>
 
-            <!-- Proyecto 3 -->
             <div class="project-card">
-                <img src="https://picsum.photos/500/300?random=3" alt="Proyecto 3">
-                <h3>Proyecto 3</h3>
-                <p>Mockup de interfaz limpia y atractiva.</p>
-                <a href="#" class="btn small">Ver más</a>
+                <img src="https://picsum.photos/600/400?random=3" alt="Proyecto 3">
+                <h3>Food Design</h3>
+                <p>Concepto visual para amantes de la comida: bonito, limpio, delicado.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
             </div>
 
-            <!-- Proyecto 4 -->
             <div class="project-card">
-                <img src="https://picsum.photos/500/300?random=4" alt="Proyecto 4">
-                <h3>Proyecto 4</h3>
-                <p>Identidad visual profesional con colores naturales.</p>
-                <a href="#" class="btn small">Ver más</a>
+                <img src="https://picsum.photos/600/400?random=4" alt="Proyecto 4">
+                <h3>Mockup Pro</h3>
+                <p>Tarjetas y gráficos modernos con estilo elegante y profesional.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
             </div>
 
         </div>
     </section>
 
-    <!-- ======= CONTACTO ======= -->
-    <section class="contacto" id="contacto">
-        <h2>Contacto</h2>
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <h2 class="section-title">Contacto</h2>
 
-        <form class="formulario">
+        <form class="contact-form">
             <input type="text" placeholder="Nombre" required>
             <input type="email" placeholder="Correo" required>
             <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
+            <button type="submit" class="btn-primary">Enviar</button>
         </form>
 
-        <div class="social">
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
-            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="YouTube"></a>
+        <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt=""></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt=""></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt=""></a>
         </div>
     </section>
 
-    <!-- ======= FOOTER ======= -->
+    <!-- FOOTER -->
     <footer>
         <p>© 2024 Cristina - Todos los derechos reservados.</p>
     </footer>
