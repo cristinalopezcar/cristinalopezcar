@@ -1,217 +1,341 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    /* GLOBAL */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Cristina</title>
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fff9f4;
-    color: #5b4636;
-}
+    <!-- Fuentes bonitas -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-/* HERO */
-.hero {
-    height: 100vh;
-    background:
-        linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)),
-        url('https://images.unsplash.com/photo-1604908812732-9c33f0e44ae1?auto=format&fit=crop&w=1350&q=80')
-        center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px;
-    color: white;
-}
+    <style>
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        /* GLOBAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.navbar ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff9f4;
+            color: #5b4636;
+        }
 
-.navbar ul a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s;
-}
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background:
+                linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1604908812732-9c33f0e44ae1?auto=format&fit=crop&w=1350&q=80')
+                center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            color: white;
+        }
 
-.navbar ul a:hover {
-    opacity: 0.7;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.logo {
-    font-family: "Playfair Display", serif;
-    font-size: 2.2rem;
-}
+        .navbar ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
 
-.hero-content {
-    text-align: center;
-    margin-bottom: 100px;
-}
+        .navbar ul a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-.title {
-    font-family: "Playfair Display", serif;
-    font-size: 4rem;
-}
+        .navbar ul a:hover {
+            opacity: 0.7;
+        }
 
-.subtitle {
-    font-size: 1.4rem;
-    opacity: 0.9;
-    margin-top: 10px;
-}
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 2.2rem;
+        }
 
-/* BUTTONS */
-.btn-primary,
-.btn-secondary {
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: 0.3s;
-}
+        .hero-content {
+            text-align: center;
+            margin-bottom: 100px;
+        }
 
-.btn-primary {
-    background: #ffb3a0;
-    color: white;
-    box-shadow: 0 4px 10px rgba(255, 150, 130, 0.4);
-}
+        .title {
+            font-family: "Playfair Display", serif;
+            font-size: 4rem;
+        }
 
-.btn-primary:hover {
-    background: #ff8f73;
-    transform: translateY(-3px);
-}
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
 
-.btn-secondary {
-    background: white;
-    border: 2px solid #ffb3a0;
-    color: #ff8f73;
-}
 
-.btn-secondary:hover {
-    background: #ffb3a0;
-    color: white;
-}
+        /* BUTTONS */
+        .btn-primary,
+        .btn-secondary {
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
 
-/* ABOUT */
-.about {
-    padding: 80px 20px;
-}
+        .btn-primary {
+            background: #ffb3a0;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 150, 130, 0.4);
+        }
 
-.section-title {
-    font-family: "Playfair Display", serif;
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #4a372f;
-}
+        .btn-primary:hover {
+            background: #ff8f73;
+            transform: translateY(-3px);
+        }
 
-.about-container {
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-}
+        .btn-secondary {
+            background: white;
+            border: 2px solid #ffb3a0;
+            color: #ff8f73;
+        }
 
-.avatar {
-    width: 260px;
-    border-radius: 50%;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
+        .btn-secondary:hover {
+            background: #ffb3a0;
+            color: white;
+        }
 
-.about-text p {
-    margin-bottom: 12px;
-    font-size: 1.1rem;
-}
 
-/* PORTFOLIO */
-.portfolio {
-    padding: 80px 20px;
-}
+        /* ABOUT */
+        .about {
+            padding: 80px 20px;
+        }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #4a372f;
+        }
 
-.project-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
 
-.project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
+        .avatar {
+            width: 260px;
+            border-radius: 50%;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
 
-.project-card:hover {
-    transform: translateY(-10px);
-}
+        .about-text p {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
 
-/* CONTACT */
-.contact {
-    padding: 80px 20px;
-    background: #fff2ea;
-}
 
-.contact-form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+        /* PORTFOLIO */
+        .portfolio {
+            padding: 80px 20px;
+        }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 14px;
-    border: none;
-    border-radius: 15px;
-    background: #ffe9e1;
-}
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-.social {
-    text-align: center;
-    margin-top: 20px;
-}
+        .project-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
 
-.social img {
-    width: 40px;
-    margin: 10px;
-    transition: 0.3s;
-}
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
 
-.social img:hover {
-    transform: scale(1.15);
-}
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
 
-/* FOOTER */
-footer {
-    background: #4a372f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+
+        /* CONTACT */
+        .contact {
+            padding: 80px 20px;
+            background: #fff2ea;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 14px;
+            border: none;
+            border-radius: 15px;
+            background: #ffe9e1;
+        }
+
+        .social {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social img {
+            width: 40px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .social img:hover {
+            transform: scale(1.15);
+        }
+
+
+        /* FOOTER */
+        footer {
+            background: #4a372f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ✨ HERO HEADER ✨ -->
+    <header class="hero" id="inicio">
+        <nav class="navbar">
+            <h1 class="logo">Cristina</h1>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h2 class="title">Mi página web</h2>
+            <p class="subtitle">Me gustan los kebabs</p>
+            <a href="#portafolio" class="btn-primary">Ver Portafolio</a>
+        </div>
+    </header>
+
+
+    <!-- ✨ SOBRE MI ✨ -->
+    <section class="about" id="sobre-mi">
+        <h2 class="section-title">Sobre mí</h2>
+
+        <div class="about-container">
+
+            <img class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?hair=longWavy&hairColor=brown&eyes=variant02&eyesColor=green&nose=variant02&accessories=Variant06&accessoriesProbability=100" alt="Avatar Cristina">
+
+            <div class="about-text">
+                <p>Soy Cristina, vaga profesional, amante de la lectura, los gatos y, por encima de todo, los kebabs.</p>
+                <p>Me encanta diseñar, dormir y pensar en qué kebab comeré mañana.</p>
+                <p>Mi personalidad está compuesta en un 70% por kebabs, 20% sueño y 10% gatos.</p>
+                <p>Promedio de productividad: 1 kebab por hora.</p>
+
+                <h3>Habilidad especial</h3>
+                <ul>
+                    <li>Comer (profesional, nivel Dios)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ✨ PORTAFOLIO ✨ -->
+    <section class="portfolio" id="portafolio">
+        <h2 class="section-title">Portafolio</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="https://picsum.photos/600/400?random=10" alt="Proyecto 1">
+                <h3>Kebab UI</h3>
+                <p>Diseño minimalista inspirado en colores cálidos de kebab auténtico.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
+            </div>
+
+            <div class="project-card">
+                <img src="https://picsum.photos/600/400?random=11" alt="Proyecto 2">
+                <h3>CatGallery</h3>
+                <p>App visual donde solo hay fotos cute de gatos. Perfecto.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
+            </div>
+
+            <div class="project-card">
+                <img src="https://picsum.photos/600/400?random=12" alt="Proyecto 3">
+                <h3>Soft Pink Dashboard</h3>
+                <p>Interfaz pastel aesthetic con visuales suaves.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
+            </div>
+
+            <div class="project-card">
+                <img src="https://picsum.photos/600/400?random=13" alt="Proyecto 4">
+                <h3>Mockup Elegante</h3>
+                <p>Diseño profesional en tonos crema y nude.</p>
+                <a href="#" class="btn-secondary">Ver más</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ✨ CONTACTO ✨ -->
+    <section class="contact" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+
+        <div class="social">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"></a>
+        </div>
+    </section>
+
+    <!-- ✨ FOOTER ✨ -->
+    <footer>
+        <p>© 2024 Cristina — Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
 
